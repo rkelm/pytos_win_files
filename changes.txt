@@ -1,0 +1,2 @@
+Release 0.1
+Tested with python 3.6 on Windows 10 Version 2004.
