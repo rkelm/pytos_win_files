@@ -60,7 +60,7 @@ import select
 import struct
 import fcntl
 import errno
-import termios
+# import termios
 import array
 import logging
 import atexit
@@ -1491,7 +1491,7 @@ class ThreadedNotifier(threading.Thread, Notifier):
         self.loop()
 
 
-class AsyncNotifier(asyncore.file_dispatcher, Notifier):
+class AsyncNotifier(asyncore.dispatcher, Notifier):
     """
     This notifier inherits from asyncore.file_dispatcher in order to be able to
     use pyinotify along with the asyncore framework.
